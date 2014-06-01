@@ -2,21 +2,34 @@ body {
     font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     color: #fff;
     text-align: center;
-    background: url("../img/bg.jpg") #666 no-repeat center center fixed;
+    background: url("../img/bg_blur.jpg") #666 no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin: 100px 0px;
+    margin: 66px 0px;
+}
+
+div.container {
+    background-color: rgba(102, 102, 102, 0.7);
+    padding: 10px;
+    max-width: 500px;
+    margin: 0px auto;
+    border-radius: 10px;
 }
 
 h1 {
     font-weight: 300;
     font-size: 49px;
+    margin-bottom: 0px;
 }
 
 a {
     color: white;
     font-weight: normal;
     text-decoration: none;
+}
+
+a.link {
+    margin: 0px 10px;
 }
