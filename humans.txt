@@ -1,0 +1,9 @@
+/* AUTHOR */
+  Elias Hernandis
+  Contact: eliashernandis@gmail.com
+  Twitter: @eliashernandis
+
+/* SITE */
+	Last update:2014/06/02
+	Language: English
+	Doctype:HTML5
