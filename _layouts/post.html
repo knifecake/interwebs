@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  {% include head.html %}
+  <body>
+    <div class="container" id="main">
+      <div class="three columns">
+        <a href="{{ site.url }}" id="homelink">
+          <div id="circle">&nbsp;</div>
+          <h6>Elias Hernandis</h6>
+        </a>
+      </div>
+      <div class="nine columns">
+        <article>
+          <a href="{{ page.url }}" title="{{ page.title }}"><h1> {{ page.title }}</h1></a>
+          {{ content }}
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
