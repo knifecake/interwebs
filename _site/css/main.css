@@ -32,6 +32,12 @@ nav {
 #blog-nav li {
   list-style-type: none; }
 
+.post-footer {
+  border-top: 1px solid #aaa;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  color: #888888; }
+
 /*
  * Base CSS based on skeleton.css
  */
