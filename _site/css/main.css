@@ -38,6 +38,9 @@ nav {
   padding: 10px 0px;
   color: #888888; }
 
+img {
+  width: 100%; }
+
 /*
  * Base CSS based on skeleton.css
  */
