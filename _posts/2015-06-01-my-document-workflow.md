@@ -18,8 +18,9 @@ LaTeX can be difficult to get working, I will explain how to get it set up on Ma
 I'll assume you are comfortable with the command line and can edit plain text files without problem.
 
 1. Okay, go ahead and install LaTeX. How? You could install the full TexLive distribution which is over 2GB in size. Perhaps it is better to grab the basic package which includes almost anything you'll every need plus a package manager for all kinds of LaTeX extensions or packages. Download the installed for BasicTex from [MacTex](https://www.tug.org/mactex/morepackages.html "MacTex, Tex Users Group"). Follow instructions to install it (it's a common OSX package) and you are ready to continue.
-2. Next head to [http://pandoc.org/installing.html](http://pandoc.org/installing.html "Pandoc Install page") and follow instructions to download and install the Mac package.
-3. You are pretty much done. Check everything is working by creating a plain text document (perhaps `test.md` is a good name). Write some Markdown in it and save, then execute `pandoc -o test.pdf test.md` and, wait for it, you have a beautiful PDF document from that ugly text file.
+2. Most likely, the packages you just installed are a bit outdated. Run `sudo tlmgr update --self && sudo tlmgr update --all` to update both the package manager and all the packages. If when running `pandoc` it complains about a missing package you may install it easily by executing `sudo tlmgr install my-package`. The package archive lives [here](http://ctan.org "CTAN").
+3. Next head to [http://pandoc.org/installing.html](http://pandoc.org/installing.html "Pandoc Install page") and follow instructions to download and install the Mac package.
+4. You are pretty much done. Check everything is working by creating a plain text document (perhaps `test.md` is a good name). Write some Markdown in it and save, then execute `pandoc -o test.pdf test.md` and, wait for it, you have a beautiful PDF document from that ugly text file.
 
 ## Diving deeper
 
