@@ -1,4 +1,7 @@
---- layout: post title: Handling a life of photos ---
+---
+layout: post
+title: Handling a life of photos
+---
 
 **Update:** I recently read [this great
 article](http://paulstamatiou.com/storage-for-photographers-part-2/ "An article
