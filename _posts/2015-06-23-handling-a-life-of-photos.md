@@ -1,6 +1,15 @@
---- layout: post title: Handling a life of photos ---
+---
+layout: post
+title: Handling a life of photos
+abstract: >
+  Today I will try to explain how I store all the photos I take in a way that
+  looks sustainable and practical to me. I try to save as much space as possible
+  without compromising quality and at the same time I try not to spend a lot of
+  time organizing photos so that I do something else.
+---
 
-**Update:** I recently read [this great
+### Update
+I recently read [this great
 article](http://paulstamatiou.com/storage-for-photographers-part-2/ "An article
 about professional photo storage") about how a professional photographer handles
 his gigabytes of photos properly. However, I still prefer my aproach, as I don't

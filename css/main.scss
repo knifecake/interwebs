@@ -1,59 +1,167 @@
 ---
 ---
-@import url(http://fonts.googleapis.com/css?family=Arvo:700|PT+Sans:400,700,400italic,700italic);
+
+$base-font-size: 18px;
+
+$font-family-serif: Georgia, serif;
+$font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+$link-color: #5291ff;
+$circle-color: #222222;
+
+// General styles
+// --------------
+html {
+  font-size: $base-font-size;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   text-align: center;
+  font-family: $font-family-sans;
+  line-height: 1.4;
+  color: $circle-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+
+  font-family: $font-family-sans;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: $link-color;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: .2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  background-color: #e0e0e0;
+  padding: .2rem;
+}
+
+img {
+  width: 100%;
+  padding: .3rem;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 0 .5rem #d0d0d0;
+}
+
+// Layout
+// ------
+.container {
+  width: 54rem;
+  max-width: 100%;
+  margin: 3rem auto;
 }
 
 article {
   text-align: left;
+  font-family: $font-family-serif;
+  line-height: 1.6;
+
+  padding-left: 4rem;
+  width: 42rem;
 }
 
+// Article type
+// ------------
+p.lead {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-family: $font-family-serif;
+  text-align: left;
+}
+
+p.article-meta {
+  font-size: ($base-font-size * .9);
+}
+
+// Main page
+// ---------
 div#hero {
   margin: 50px;
 }
 
-div#main {
-  margin-top: 50px;
-}
-
-#homelink {
-  text-decoration: none;
-  color: inherit;
-}
-
 div#circle {
-  border-radius: 80px;
-  background-color: #222;
-  width: 160px;
-  height: 160px;
+  border-radius: 50%;
+  background-color: $circle-color;
+  color: $circle-color;
+  width: 10rem;
+  height: 10rem;
   margin: 0px auto 30px auto;
 }
 
 nav {
   padding: 15px;
   margin-bottom: 40px;
-  font-size: 1.8rem;
 
   a {
     padding: 0px 7px;
   }
 }
 
-#blog-nav li {
-  list-style-type: none;
+ul#blog-nav {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    padding-top: .3rem;
+  }
 }
 
-.post-footer {
-  border-top: 1px solid #aaa;
-  margin: 20px 0px;
-  padding: 10px 0px;
-  color: #888888;
+@media (max-width: 54rem) and (min-width: 34rem) {
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  article {
+    width: 100%;
+    padding-left: 2rem;
+  }
 }
 
-img {
-  width: 100%;
-}
+@media (max-width: 34rem) {
 
-@import "skeleton";
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  article {
+    width: 100%;
+    padding-left: 0;
+  }
+}

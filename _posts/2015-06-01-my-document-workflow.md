@@ -1,4 +1,7 @@
---- layout: post title: Setting up my document workflow ---
+---
+layout: post
+title: Setting up my document workflow
+---
 
 **Where I come from:** Apple Pages for everything. No math equations, no easy
 collaboration or sharing of documents across *my own* devices (yes do not use
