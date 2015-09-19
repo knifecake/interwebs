@@ -7,14 +7,14 @@ html {
 
 body {
   text-align: center;
-  font-family: Helvetica Neue;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.4;
   color: #222222; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: .5rem;
-  font-family: Helvetica Neue; }
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 h1 {
   font-size: 2rem;
@@ -57,7 +57,7 @@ img {
 
 article {
   text-align: left;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   line-height: 1.6;
   padding-left: 4rem;
   width: 42rem; }
@@ -66,7 +66,7 @@ p.lead {
   margin: 2rem 0;
   font-size: 1.2rem;
   line-height: 1.4;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   text-align: left; }
 
 p.article-meta {

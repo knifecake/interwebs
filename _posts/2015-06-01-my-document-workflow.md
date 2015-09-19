@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Setting up my document workflow
+abstract: >
+  New file formats are a day to day thing now. Every piece of software defines
+  its own, most likely proprietary, filetype and syntax. But all software
+  certainly has an expiration date, on which it becomes unsupported. How will
+  you be able to open your files in 100 years time?
 ---
 
 **Where I come from:** Apple Pages for everything. No math equations, no easy
