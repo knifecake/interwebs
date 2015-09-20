@@ -1,6 +1,7 @@
 html {
   font-size: 18px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -9,7 +10,8 @@ body {
   text-align: center;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  color: #222222; }
+  color: #222222;
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
@@ -51,9 +53,8 @@ img {
   box-shadow: 0 0 .5rem #d0d0d0; }
 
 .container {
-  width: 54rem;
-  max-width: 100%;
-  margin: 3rem auto; }
+  max-width: 54rem;
+  margin: 0 auto; }
 
 article {
   text-align: left;
@@ -72,16 +73,35 @@ p.lead {
 p.article-meta {
   font-size: 16.2px; }
 
-div#hero {
-  margin: 50px; }
+footer {
+  background-color: #ffce00;
+  min-height: 234px;
+  padding: 2rem 0;
+  text-align: left; }
+  footer a {
+    color: #222222;
+    font-weight: bold; }
 
-div#circle {
-  border-radius: 50%;
-  background-color: #222222;
-  color: #222222;
-  width: 10rem;
-  height: 10rem;
-  margin: 0px auto 30px auto; }
+.footer-links li {
+  list-style-type: none;
+  height: 2rem;
+  margin: .5rem 0; }
+  .footer-links li a {
+    display: inline-block;
+    padding: 7.5px 15px;
+    line-height: 1; }
+
+.link-logo {
+  max-width: 2rem;
+  float: left; }
+
+svg#elias-heading {
+  max-width: 36rem;
+  margin: 4rem auto; }
+  svg#elias-heading path {
+    fill: #222222; }
+    svg#elias-heading path:hover {
+      fill: #ffce00; }
 
 nav {
   padding: 15px;
@@ -90,10 +110,17 @@ nav {
     padding: 0px 7px; }
 
 ul#blog-nav {
+  margin: 0;
   padding: 0; }
   ul#blog-nav li {
     list-style-type: none;
     padding-top: .3rem; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
 
 @media (max-width: 54rem) and (min-width: 34rem) {
   .container {

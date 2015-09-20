@@ -2,23 +2,21 @@
 layout: default
 ---
 
-<div id="hero">
-  <div id="circle">Elias</div>
+<header>
+  {% include elias.html %}
+</header>
 
-  <h1>{{ site.title }}</h1>
+<nav>
+  <a href="mailto:eliashernandis@gmail.com" title="Email me">Email</a>
+  <a href="https://twitter.com/eliashernandis">Twitter</a>
+  <a href="https://github.com/knifecake">Github</a>
+</nav>
 
-  <nav>
-    <a href="mailto:eliashernandis@gmail.com" title="Email me">Email</a>
-    <a href="https://twitter.com/eliashernandis">Twitter</a>
-    <a href="https://github.com/knifecake">Github</a>
-  </nav>
-
-  <h2>Blog posts</h2>
-  <ul id="blog-nav">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<h3>Blog posts</h3>
+<ul id="blog-nav">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

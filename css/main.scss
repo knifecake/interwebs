@@ -7,13 +7,15 @@ $font-family-serif: Georgia, serif;
 $font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
 
 $link-color: #5291ff;
-$circle-color: #222222;
+$dark-gray: #222222;
+$yellow: #ffce00;
 
 // General styles
 // --------------
 html {
   font-size: $base-font-size;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -24,7 +26,8 @@ body {
   text-align: center;
   font-family: $font-family-sans;
   line-height: 1.4;
-  color: $circle-color;
+  color: $dark-gray;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,9 +83,8 @@ img {
 // Layout
 // ------
 .container {
-  width: 54rem;
-  max-width: 100%;
-  margin: 3rem auto;
+  max-width: 54rem;
+  margin: 0 auto;
 }
 
 article {
@@ -108,21 +110,53 @@ p.article-meta {
   font-size: ($base-font-size * .9);
 }
 
+footer {
+  background-color: $yellow;
+  min-height: 234px;
+  padding: 2rem 0;
+
+  text-align: left;
+
+  a {
+    color: $dark-gray;
+    font-weight: bold;
+  }
+}
+
+.footer-links {
+  li {
+    list-style-type: none;
+    height: 2rem;
+    margin: .5rem 0;
+
+    a {
+      display: inline-block;
+      padding: 7.5px 15px;
+      line-height: 1;
+    }
+  }
+}
+
+.link-logo {
+  max-width: 2rem;
+  float: left;
+}
+
+svg#elias-heading {
+  max-width: 36rem;
+  margin: 4rem auto;
+
+  path {
+    fill: $dark-gray;
+
+    &:hover {
+      fill: $yellow;
+    }
+  }
+}
+
 // Main page
 // ---------
-div#hero {
-  margin: 50px;
-}
-
-div#circle {
-  border-radius: 50%;
-  background-color: $circle-color;
-  color: $circle-color;
-  width: 10rem;
-  height: 10rem;
-  margin: 0px auto 30px auto;
-}
-
 nav {
   padding: 15px;
   margin-bottom: 40px;
@@ -133,12 +167,20 @@ nav {
 }
 
 ul#blog-nav {
+  margin: 0;
   padding: 0;
 
   li {
     list-style-type: none;
     padding-top: .3rem;
   }
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
 }
 
 @media (max-width: 54rem) and (min-width: 34rem) {
