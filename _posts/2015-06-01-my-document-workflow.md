@@ -94,8 +94,7 @@ After a short while you will probably realise how tiresome it is to compile
 every document you make into a PDF or any other document type (remember Pandoc
 can even do `.docx` if you ever need to share). You surely can automate this
 process. I did. You can build your own scripts or check out
-[mine](https://github.com/knifecake/dotfiles/blob/master/osx/scripts/produce "A
-script to automate compilation"). Certainly you can do better and add options to
+[mine](https://github.com/knifecake/dotfiles/blob/master/osx/school-tools/produce). Certainly you can do better and add options to
 customize the output name, perhaps add other formats. Please feel free to build
 upon it and please make a pull request if you make anything better. (I'm
 thinking about using Make or Rake for this...).
