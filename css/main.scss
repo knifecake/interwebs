@@ -8,6 +8,7 @@ $font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
 
 $link-color: #5291ff;
 $dark-gray: #222222;
+$light-gray: lighten($dark-gray, 30%);
 $yellow: #ffce00;
 
 // General styles
@@ -78,6 +79,16 @@ img {
   padding: .3rem;
   border: 1px solid #d0d0d0;
   box-shadow: 0 0 .5rem #d0d0d0;
+}
+
+figure img {
+  cursor: zoom-in;
+}
+
+figcaption {
+  font-family: $font-family-sans;
+  font-size: .7rem;
+  color: $light-gray;
 }
 
 // Layout

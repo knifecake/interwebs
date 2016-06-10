@@ -52,6 +52,14 @@ img {
   border: 1px solid #d0d0d0;
   box-shadow: 0 0 .5rem #d0d0d0; }
 
+figure img {
+  cursor: zoom-in; }
+
+figcaption {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .7rem;
+  color: #6f6f6f; }
+
 .container {
   max-width: 54rem;
   margin: 0 auto; }
