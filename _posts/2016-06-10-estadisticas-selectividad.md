@@ -3,7 +3,8 @@ layout: post
 title: Estadísticas PAU 2012-2016
 abstract: >
   Aunque este (2016) es el úlimo año en el que se celebra la prueba, puede que
-  para futuras generaciones con exámenes similares esto sea de utilidad.
+  para futuras generaciones con exámenes similares esto sea de utilidad. Para
+  ninguna asignatura se consideraron los modelos de examen.
 ---
 
 ## Historia de España
@@ -51,4 +52,38 @@ gráfico para que saques tus propias conclusiones:
   <figcaption>Prevalencia de los temas</figcaption>
 </figure>
 
-Próximamente las estadísticas de Lengua.
+
+## Lengua Castellana
+
+No hay mucho que decir de este examen, solamente que es probablemente el más
+largo y completo. Si dudas en un tema te retrasarás y no te dará tiempo a
+acabar, por eso lo mejor es aprenderselos todos que no son tantos. El tema 12
+cae más de lo que parece aunque sí que es verdad que hay algunos, como el 8 o la
+lectura de hispanoamérica que no caen casi nada.
+
+Aquí están [los datos](/docs/2016/estadisticas-pau-len.ods) y a
+continuación unas gráficas:
+
+<figure>
+  <a href="/img/posts/2016/prevalencia-len-temas.png">
+  <img alt="gráfico de barras de los temas"
+  src="/img/posts/2016/prevalencia-len-temas.png">
+  </a>
+  <figcaption>Prevalencia de los temas</figcaption>
+</figure>
+
+<figure>
+  <a href="/img/posts/2016/prevalencia-len-lecturas.png">
+  <img src="/img/posts/2016/prevalencia-len-lecturas.png" alt="gráfico de barras
+  de las lecturas">
+  </a>
+  <figcaption>Prevalencia de las lecturas
+    <ol>
+      <li>obra de los siglos XVIII o XIX</li>
+      <li>obra del siglo XX anterior a 1939</li>
+      <li>obra española posterior a 1939</li>
+      <li>obra hispanoamericana posterior a 1940</li>
+    </ol>
+  </figcaption>
+</figure>
+
