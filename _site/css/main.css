@@ -52,6 +52,9 @@ img {
   border: 1px solid #d0d0d0;
   box-shadow: 0 0 .5rem #d0d0d0; }
 
+figure {
+  padding-bottom: 1rem; }
+
 figure img {
   cursor: zoom-in; }
 
