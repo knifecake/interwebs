@@ -35,7 +35,7 @@ Mi experiencia personal y algunas conclusiones que he sacado de los datos:
 * yo estudié con tarjetas: en cada una ponía el título de un apartado de un tema
     o de dos epígrafes que normalmente confundía (economía del XVI y del XVII)
 
-En fin, aquí están [los datos](/docs/2016/estadisticas-pau-he.ods) y algún
+En fin, aquí están [los datos [archivo .ods]](/docs/2016/estadisticas-pau-he.ods) y algún
 gráfico para que saques tus propias conclusiones:
 
 <figure>
@@ -61,7 +61,7 @@ acabar, por eso lo mejor es aprenderselos todos que no son tantos. El tema 12
 cae más de lo que parece aunque sí que es verdad que hay algunos, como el 8 o la
 lectura de hispanoamérica que no caen casi nada.
 
-Aquí están [los datos](/docs/2016/estadisticas-pau-len.ods) y a
+Aquí están [los datos [archivo .ods]](/docs/2016/estadisticas-pau-len.ods) y a
 continuación unas gráficas:
 
 <figure>
