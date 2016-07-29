@@ -23,20 +23,21 @@ El consejo para este examen suele ser:
 
 Mi experiencia personal y algunas conclusiones que he sacado de los datos:
 
-* si no te entra la cultura (como a mí), puedes dejarte los epígrafes de arte y
-    cultura de los temas 5 - 9 si a cambio eres capaz de recordar los epígrafes
-    de los temas 1 y 3 que suelen entrar mucho (sobre todo el 1.2 y el 3.1).
+* si no eres capaz de aprenderte la cultura (como me pasa a mí), puedes dejarte
+  los epígrafes de arte y cultura de los temas 5 - 9 si a cambio eres capaz de
+  recordar los epígrafes de los temas 1 y 3 que suelen entrar mucho (sobre todo el 1.2 y el 3.1).
 * si te haces las fuentes de los años anteriores tienes casi asegurado que te va
-    a salir una parecida a ellas, sobre todo si vas al XIX (siempre te sale la
-    Transición a la democracia de fuente)
-* el ferrocarril y la transición son fuentes que les encantan
-* de verdad que te merece la pena estudiarte el siglo XX si se te dan mal los
-    textos – el siglo XX solo ha salido 2 veces con texto
+  a salir una parecida a ellas, sobre todo si vas al XIX (siempre te sale la
+  Transición a la democracia de fuente)
+* el ferrocarril y la transición son fuentes que les encantan de verdad que te
+* merece la pena estudiarte el siglo XX si se te dan mal los
+  textos – el siglo XX solo ha salido 2 veces con texto
 * yo estudié con tarjetas: en cada una ponía el título de un apartado de un tema
-    o de dos epígrafes que normalmente confundía (economía del XVI y del XVII)
+  o de dos epígrafes que normalmente confundía (economía del XVI y del XVII)
 
-En fin, aquí están [los datos [archivo .ods]](/docs/2016/estadisticas-pau-he.ods) y algún
-gráfico para que saques tus propias conclusiones:
+En fin, aquí están [los datos [archivo
+.ods]](/docs/2016/estadisticas-pau-he.ods) y algún gráfico para que saques tus
+propias conclusiones:
 
 <figure>
   <a href="/img/posts/2016/prevalencia-epigrafes.png">
