@@ -1,7 +1,7 @@
 ---
 ---
-
 $base-font-size: 18px;
+$small-font-size: 0.75rem;
 
 $font-family-serif: Georgia, serif;
 $font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -9,10 +9,10 @@ $font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
 $link-color: #5291ff;
 $dark-gray: #222222;
 $light-gray: lighten($dark-gray, 30%);
+$lighter-gray: lighten($dark-gray, 50%);
 $yellow: #ffce00;
 
-// General styles
-// --------------
+// preserve some sanity
 html {
   font-size: $base-font-size;
   box-sizing: border-box;
@@ -31,6 +31,7 @@ body {
   margin: 0;
 }
 
+// Type
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: .5rem;
@@ -69,10 +70,32 @@ a {
   }
 }
 
+small {
+  font-size: $small-font-size;
+}
+
 code {
   background-color: #e0e0e0;
   padding: .2rem;
 }
+
+.text-muted {
+  color: $lighter-gray;
+}
+
+p.lead {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-family: $font-family-serif;
+  text-align: left;
+}
+
+p.article-meta {
+  font-size: ($base-font-size * .9);
+}
+
+// figures and images
 
 img {
   width: 100%;
@@ -91,12 +114,11 @@ figure img {
 
 figcaption {
   font-family: $font-family-sans;
-  font-size: .7rem;
+  font-size: $small-font-size;
   color: $light-gray;
 }
 
 // Layout
-// ------
 .container {
   max-width: 54rem;
   margin: 0 auto;
@@ -111,29 +133,17 @@ article {
   width: 42rem;
 }
 
-// Article type
-// ------------
-p.lead {
-  margin: 2rem 0;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-family: $font-family-serif;
-  text-align: left;
-}
-
-p.article-meta {
-  font-size: ($base-font-size * .9);
-}
-
+// footer
 footer {
-  background-color: $yellow;
+  font-size: $small-font-size;
+  background-color: $dark-gray;
+  color: $lighter-gray;
   min-height: 234px;
   padding: 2rem 0;
-
   text-align: left;
 
   a {
-    color: $dark-gray;
+    color: inherit;
     font-weight: bold;
   }
 }
@@ -171,7 +181,6 @@ svg#elias-heading {
 }
 
 // Main page
-// ---------
 nav {
   padding: 15px;
   margin-bottom: 40px;
@@ -191,6 +200,7 @@ ul#blog-nav {
   }
 }
 
+// helper classes
 .pull-left {
   float: left;
 }
@@ -211,7 +221,6 @@ ul#blog-nav {
 }
 
 @media (max-width: 34rem) {
-
   .container {
     padding: 0 1rem;
     width: 100%;
@@ -221,4 +230,13 @@ ul#blog-nav {
     width: 100%;
     padding-left: 0;
   }
+}
+
+// fooooorms!
+form {
+  margin: 2rem auto;
+}
+input {
+  height: 1.7rem;
+  font-size: 1rem;
 }

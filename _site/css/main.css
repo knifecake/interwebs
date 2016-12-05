@@ -42,9 +42,25 @@ a {
   a:hover {
     text-decoration: underline; }
 
+small {
+  font-size: 0.75rem; }
+
 code {
   background-color: #e0e0e0;
   padding: .2rem; }
+
+.text-muted {
+  color: #a2a2a2; }
+
+p.lead {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-family: Georgia, serif;
+  text-align: left; }
+
+p.article-meta {
+  font-size: 16.2px; }
 
 img {
   width: 100%;
@@ -60,7 +76,7 @@ figure img {
 
 figcaption {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: .7rem;
+  font-size: 0.75rem;
   color: #6f6f6f; }
 
 .container {
@@ -74,23 +90,15 @@ article {
   padding-left: 4rem;
   width: 42rem; }
 
-p.lead {
-  margin: 2rem 0;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-family: Georgia, serif;
-  text-align: left; }
-
-p.article-meta {
-  font-size: 16.2px; }
-
 footer {
-  background-color: #ffce00;
+  font-size: 0.75rem;
+  background-color: #222222;
+  color: #a2a2a2;
   min-height: 234px;
   padding: 2rem 0;
   text-align: left; }
   footer a {
-    color: #222222;
+    color: inherit;
     font-weight: bold; }
 
 .footer-links li {
@@ -149,3 +157,9 @@ ul#blog-nav {
   article {
     width: 100%;
     padding-left: 0; } }
+form {
+  margin: 2rem auto; }
+
+input {
+  height: 1.7rem;
+  font-size: 1rem; }

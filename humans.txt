@@ -9,6 +9,5 @@
 	Doctype: HTML5
 
 /* TECH */
-  Skeleton.css
   Jekyll, SCSS
   MacVim
