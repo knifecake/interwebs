@@ -16,6 +16,17 @@ resuelve todas para ver qué tal llevo el examen de conjuntos del viernes. Las
 ecuaciones diofánticas se emplean para XXXX. Esto es un programita que las
 resuelve todas para ver qué tal llevo el examen de conjuntos del viernes.
 
+$$a^2 + b^2 = c^2$$
+
+Las ecuaciones diofánticas se emplean para XXXX. Esto es un programita que las
+resuelve todas para ver qué tal llevo el examen de conjuntos del viernes. Las
+ecuaciones diofánticas se emplean para XXXX. Esto es un programita que las
+resuelve todas para ver qué tal llevo el examen de conjuntos del viernes.  Las
+ecuaciones diofánticas se emplean para XXXX. Esto es un programita que las
+resuelve todas para ver qué tal llevo el examen de conjuntos del viernes. Las
+ecuaciones diofánticas se emplean para XXXX. Esto es un programita que las
+resuelve todas para ver qué tal llevo el examen de conjuntos del viernes.
+
 <script src="https://gist.github.com/knifecake/d5a197f60e8d3d271a19.js"></script>
 
 <form action="#" style="text-align: center">
