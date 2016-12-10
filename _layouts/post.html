@@ -24,26 +24,7 @@
         </article>
       </section>
     </div>
-    <footer>
-      <div class="container">
-        <div class="pull-left">
-          <p>{{ site.author }}, {{ site.time | date: '%Y' }}.</p>
-          <p>Currently: <a
-             href="http://www.uam.es/ss/Satellite/EscuelaPolitecnica/es/estudios/grado-3/Page/contenidoFinal/doble-grado-en-ingenieria-informatica-y-matematicas-3.htm">Ingeniería
-             Informática y Matemáticas @ UAM.</a></p>
-          <p>Say hi on <a href="https://twitter.com/eliashernandis">Twitter</a>
-          or check out some projects I'm working on on <a
-          href="https://github.com/knifecake">GitHub</a>.
-        </div>
-        <div class="pull-right">
-          <p>
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Some rights reserved.</a>
-          </p>
-
-          <p>Something to say: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-        </div>
-      </div>
-    </footer>
+  {% include footer.html %}
   {% include scripts.html %}
   </body>
 </html>

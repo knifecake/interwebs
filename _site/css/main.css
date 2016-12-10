@@ -97,7 +97,8 @@ footer {
   min-height: 234px;
   overflow: hidden;
   padding: 2rem 0;
-  text-align: left; }
+  text-align: left;
+  margin-top: 2rem; }
   footer a {
     color: inherit;
     font-weight: bold; }
