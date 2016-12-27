@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Probando el algoritmo de Djikstra en el Metro de Madrid
+title: Probando el algoritmo de Dijkstra en el Metro de Madrid
 abstract: >
   La idea original era ver si era posible cargar un archivo que
   describe la red de metro de Madrid como una lista de estaciones por líneas pero
   representándola como un grafo. Luego pudimos implementar una versión
-  simplificada del algoritmo de Djikstra que encuentra el camino más corto (en
+  simplificada del algoritmo de Dijkstra que encuentra el camino más corto (en
   número de estaciones) entre dos paradas elegidas.
 ---
 
@@ -23,3 +23,4 @@ bastante, todavía sigue fallando a veces si el usuario introduce `Ctrl-D`.
 Bueno sin más dilación aquí va el código:
 
 <script src="https://gist.github.com/knifecake/53758381bc4feb666516b3f0448dc301.js"></script>
+
