@@ -170,8 +170,8 @@ footer {
 }
 
 svg#elias-heading {
-  max-width: 36rem;
-  margin: 4rem auto;
+  max-width: 24rem;
+  margin: 3rem auto;
 
   path {
     fill: $dark-gray;
@@ -183,7 +183,7 @@ svg#elias-heading {
 }
 
 // Main page
-nav {
+nav.main-nav {
   padding: 15px;
   margin-bottom: 40px;
 
@@ -200,6 +200,16 @@ ul#blog-nav {
     list-style-type: none;
     padding-top: .3rem;
   }
+}
+
+nav.top-nav {
+    margin-top: 2rem;
+    text-align: left;
+    font-family: $font-family-serif;
+
+    a {
+        color: $lighter-gray;
+    }
 }
 
 // helper classes
@@ -238,6 +248,7 @@ ul#blog-nav {
 form {
   margin: 2rem auto;
 }
+
 input {
   height: 1.7rem;
   font-size: 1rem;

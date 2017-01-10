@@ -6,17 +6,19 @@ layout: default
   {% include elias.html %}
 </header>
 
-<nav>
+<nav class="main-nav">
   <a href="mailto:eliashernandis@gmail.com" title="Email me">Email</a>
   <a href="https://twitter.com/eliashernandis">Twitter</a>
   <a href="https://github.com/knifecake">Github</a>
 </nav>
 
 <h3>Blog posts</h3>
-<ul id="blog-nav">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<nav>
+  <ul id="blog-nav">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
