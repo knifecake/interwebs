@@ -117,17 +117,17 @@ footer {
   float: left; }
 
 svg#elias-heading {
-  max-width: 36rem;
-  margin: 4rem auto; }
+  max-width: 24rem;
+  margin: 3rem auto; }
   svg#elias-heading path {
     fill: #222222; }
     svg#elias-heading path:hover {
       fill: #ffce00; }
 
-nav {
+nav.main-nav {
   padding: 15px;
   margin-bottom: 40px; }
-  nav a {
+  nav.main-nav a {
     padding: 0px 7px; }
 
 ul#blog-nav {
@@ -136,6 +136,13 @@ ul#blog-nav {
   ul#blog-nav li {
     list-style-type: none;
     padding-top: .3rem; }
+
+nav.top-nav {
+  margin-top: 2rem;
+  text-align: left;
+  font-family: Georgia, serif; }
+  nav.top-nav a {
+    color: #a2a2a2; }
 
 .pull-left {
   float: left; }
