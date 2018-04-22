@@ -17,7 +17,9 @@ Make es un programa para Linux, por lo que necesitas tener acceso a una terminal
 
 A la larga casi todo el mundo acaba cogiendo la primera porque es la que mejor funciona, pero si no tienes ganas o espacio en el disco, prueba la segunda. Asumiendo que has cogido la primera o la segunda, para instalar el programa `make`, que suele venir por defecto puedes hacer los siguiente si estás en Ubuntu o uno de sus primos (Debian, Xubuntu, etc.):
 
+{% highlight bash %}
     sudo apt-get install make
+{% endhighlight %}
 
 Te pedirá tu contraseña para instalarlo. Ten en cuenta que por seguridad la contraseña no se muestra mientras la escribes (como en el navegador, que te muestra puntos, pero aquí no sale nada). Cuando hayas terminado de escribirla pulsa `Enter` y listo.
 
@@ -28,11 +30,11 @@ Te pedirá tu contraseña para instalarlo. Ten en cuenta que por seguridad la co
 
 Vale, ya tienes `make` instalado. Ahora necesitas poder utilizarlo. Aunque no tengas `Makefile` todavía, el programa es suficientemente listo para compilar programas muy básico. Así por ejemplo si tienes el típico programa que imprime `hello world` en un fichero que has llamado `hello.c` puedes hacer lo siguiente para compilarlo (primero abre una terminal):
 
-```bash
-cd carpeta_de_proyectos/carpeta_del_proyecto # aquí pon la ruta donde tienes guardado hello.c
-ls # imprime una lista de los archivos en dicha carpeta, asegúrate de que hello.c está aquí
-make hello # ojo, no make hello.c
-```
+{% highlight bash %}
+  cd carpeta_de_proyectos/carpeta_del_proyecto # aquí pon la ruta donde tienes guardado hello.c
+  ls # imprime una lista de los archivos en dicha carpeta, asegúrate de que hello.c está aquí
+  make hello # ojo, no make hello.c
+{% endhighlight %}
 
 Después de unos segundos y de que aparezca algo de texto, si no pone nada de error, tienes tu archivo `hello.c` compilado. Prueba a ejecutarlo escribiendo `./hello` en la terminal. Magia? No, en realidad es que `make` detecta que lo que quieres generar es un ejecutable llamado `hello` (de ahí lo de `make hello`) a partir de un archivo que intuye que se llama `hello.c` (es la convención).
 
@@ -41,10 +43,10 @@ Después de unos segundos y de que aparezca algo de texto, si no pone nada de er
 
 Supongamos que tu archivo `main.c` incluye otros archivos como `stack.h`, ya que has implementado una pila y necesitas utilizarla en tu archivo principal. En esta ocasión, si simplemente haces `make main`, el programa `make` no será capaz de inferir que quieres enlazar tu `stack` con el `main` y probablemente la compilación falle. Aquí entran en juego los `Makefile`s, que albergan instrucciones de compilación para que no tengas que escribirlas cada vez que quieres compilar un archivo. Por ejemplo, supongamos que tienes un archivo objeto `stack.o` que ya has compilado, y quieres que `make` lo enlace con `main` cada vez que compiles `main.c`, un ejemplo de `Makefile` que haría esto sería el siguiente:
 
-```Makefile
+{% highlight make %}
 main: main.c stack.o
 	gcc -Wall -g -o main main.c stack.o
-```
+{% endhighlight %}
 
 Veamos paso a paso lo que está ocurriendo:
 1. En la primera linea tenemos el nombre del objetivo o target (`main` en este caso). Cuando ejecutamos `make algo`, el programa `make` buscará un objetivo llamado `algo`. Detrás de los dos puntos ponemos los nombres de los archivos que se utilizan para generar este target, en este caso el propio código fuente (`main.c`) y el objeto `stack.o` (no importa el orden). De esta manera le estamos diciendo a `make` que cada vez que le digamos que compile lo necesario para obtener el ejecutable `main`, se asgure de que existen `main.c` y `stack.o`. De hecho, si no existen ya, `make` buscará la manera de compilarlos (aquí está el poder de `make`). *Nota:* no tienen por qué coincidir el nombre del objetivo y el ejecutable que generamos con el compilador (lo que va detrás del `-o`, pero si no es así, `make` no será tan eficiente como puede ser).
@@ -60,10 +62,10 @@ Pero aquí pasa algo raro. Normalmente no tenemos un archivo `stack.o`, sino que
 
 ¿Recuerdas como al crear el `Makefile` especificábamos qué archivos eran necesarios para compilar un objetivo después de los dos puntos? Me refiero a `main.c stack.o`, lo que hemos puesto antes en la primera línea. En este caso `main.c` es un archivo que ya tenemos, pero `stack.o` necesita ser compilado a partir de `stack.c` y `stack.h`. Pues en vez de liar más la "receta" del objetivo `main` (la que hemos definido arriba), haremos una nueva para `stack.o`. De esta manera cuando `make` vea que necesita `stack.o` para compilar `main` y no lo tiene, recurrirá a esta nueva receta para generar `stack.o` y luego compilará `main`. Definamos la nueva receta a continuación de la anterior (el orden no importa).
 
-```Makefile
+{% highlight make %}
 stack.o: stack.h stack.c
 	gcc -Wall -g -c stack.o stack.c
-```
+{% endhighlight %}
 
 Paso a paso:
 1. En la primera línea definimos un nuevo objetivo, `stack.o`, que a su vez depende de los objetivos `stack.c` y `stack.h`. Como estos últimos son archivos que ya existen, no necesitamos definir "recetas" para ellos. Es más, `make` es suficientemente inteligente como para no compilar `stack.o` de nuevo, si no se han modificado cualquiera de sus dependencias (`stack.c` y `stack.h` en este caso).
@@ -77,13 +79,7 @@ Recapitulando, ahora al ejecutar `make main` en la linea de comandos, primero se
 
 De momento `make` parece muy cómodo, pero poco a poco verás que se te llena la carpeta del proyecto con miles de archivos `.o` que realmente no sirven para mucho. Es más, cuando tengas que enviar tu proyecto a alguien tendrás que borrarlos, ya que los ejecutable solo valen para el sistema operativo que los genera, por lo que si estás el Linux no valdrán en MacOS o en otros sabores de Linux (con windows ya ni me meto). Puedes borrarlos a mano, o puedes decirle a `make` cómo borrarlos todos de golpe y ahorrar aún más tiempo:
 
-```Makefile
-clean:
-	rm -rf *.o
-```
-Aquí hemos creado un objetivo, `clean`, que no tiene dependencias y que lo que hace es borrar cualquier archivo que acabe en `.o`. Hay un pequeño problema. Hemos dicho que los nombres de los objetivos se corresponden con el del archivo que generan pero `clean` no solo no genera, si no que borra archivos! Para que `make` no se líe añadimos `.PHONY: clean` encima de esta tarea. Nos queda el `Makefile` así:
-
-```Makefile
+{% highlight make %}
 main: main.c stack.o
 	gcc -g -Wall -o main main.c stack.o
 
@@ -93,21 +89,33 @@ stack.o: stack.c stack.h
 .PHONY: clean
 clean:
 	rm -rf *.o
-```
+{% endhighlight %}
+
+Aquí hemos creado un objetivo, `clean`, que no tiene dependencias y que lo que hace es borrar cualquier archivo que acabe en `.o`. Hay un pequeño problema. Hemos dicho que los nombres de los objetivos se corresponden con el del archivo que generan pero `clean` no solo no genera, si no que borra archivos! Para que `make` no se líe añadimos `.PHONY: clean` encima de esta tarea. Nos queda el `Makefile` así:
+
+{% highlight make %}
+clean:
+	rm -rf *.o
+{% endhighlight %}
 
 ## Cómo utilizar variables para ganar aún más tiempo
 
 Lo más probable es que siempre estés repitiendo `gcc -Wall -g` todo el rato. Lo que vamos a hacer es crear un par de variables para guardar eso y así no tener que escribirlo siempre. En su lugar le diremos a `make` que utilize lo que hay en las variables. Ahora puede no parecer de mucha utilidad pero hay veces en las que tienes unas 10 banderas, así que a la larga merece la pena. Normalmente definimos las variables al principio del `Makefile`:
-```Makefile
+
+{% highlight make %}
 CC=gcc
 CFLAGS=-Wall -g
-```
+{% endhighlight %}
+
 y para utilizar las variables, es decir para que `make` ponga lo que hay guardado en la variable donde la queremos utilizar hacemos así:
-```Makefile
+
+{% highlight make %}
 $(CC) $(CFLAGS) -o main main.c stack.o
-```
+{% endhighlight %}
+
 de manera que el `Makefile` ahora es así:
-```Makefile
+
+{% highlight make %}
 CC=gcc
 CFLAGS=-Wall -g
 main: main.c stack.o
@@ -119,7 +127,7 @@ stack.o: stack.c stack.h
 .PHONY: clean
 clean:
 	rm -rf *.o
-```
+{% endhighlight %}
 
 algo más corto sí que es.
 
@@ -127,12 +135,12 @@ algo más corto sí que es.
 
 Si te fijas, hay algo que seguimos repitiendo. Normalmente las dependencias de un target que se un ejecutable (lo que ponemos después de los dos puntos) coinciden con lo que vamos a utilizar en el enlazado, es decir con lo último que ponemos en el comando de compilación. Podemos crear variables que contengan las dependencias de cada uno de los ejecutables y utilizarlas para el enlazado (y por supuesto también para las dependencias). Haríamos algo así:
 
-```Makefile
+{% highlight make %}
 OBJS_MAIN=stack.o
 ...
 main: main.c $(OBJSMAIN)
 	$(CC) $(CFLAGS) -o main.c $(OBJSMAIN)
-  ```
+{% endhighlight %}
 
 aunque aquí puede parecer que el beneficio no es muy grande, si tuvieramos muchos objetos que enlazar, el `Makefile` si que sería significativamente más corto.
 
@@ -141,14 +149,14 @@ aunque aquí puede parecer que el beneficio no es muy grande, si tuvieramos much
 
 Muchas veces tenemos que distribuir el código, o enviarlo, en forma de `zip`. En general, para todas aquellas veces que no vayamos a utilizar la misma estructura de carpetas para desarrollar un proyecto que para enviarlo (pienso en las prácticas de programación, por ejemplo), puede ser útil tener un target de `make` reordene los archivos por nosotros. Supongamos que tenemos que generar un `.zip` con los archivos fuente, con el propio `Makefile` y con una memoria explicativa. Podemos definir el siguiente target, que hace uso del comando `unzip` para generar un archivo comprimido:
 
-```Makefile
+{% highlight make %}
 .PHONY: dist
 dist: clean
 	mkdir para_enviar # creamos una carpeta con lo que se va a enviar
 	cp *.c *.h Makefile memoria.pdf para_enviar/ # copiamos los archivos necesarios
 	zip entrega.zip para_enviar # comprimimos la carpeta
 	rm -rf para_enviar # borramos la carpeta que habiamos creado, ahora ya tenemos el .zip
-```
+{% endhighlight %}
 
 Una nota final: no hemos incluido la lista de todos los archivos fuente como dependencias del target `dist`. Esto hará que aunque no haya cambiado nada, si ejecutamos `make dist`, el archivo comprimido se volverá a generar igualmente. ¿Se te ocurre como modificar la tarea para que no ocurra esto innecesariamente? Es más, ¿qué variables utilizarías para evitar que la lista de dependencias fuera kilométrica?
 

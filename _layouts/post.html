@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     <div class="container">
-      <nav class="top-nav"><a href="{{ site.url }}">&laquo; Go back</a></nav>
+      <nav class="np-posts"><a href="{{ site.url }}">&laquo; Go back</a></nav>
       <section class="content">
         <h1>{{ page.title }}</h1>
         <p class="article-meta text-muted"><small>by</small> {% if page.author %} {{
@@ -18,6 +18,14 @@
 
           {{ content }}
 
+          <nav class="np-posts">
+            {% if page.previous %}
+              <a href="{{ page.previous.url }}">&laquo; Previous post</a>
+            {% endif %}
+            {% if page.next %}
+              <a style="float: right" href="{{ page.next.url }}">Next post &raquo;</a>
+            {% endif %}
+          </nav>
         </article>
       </section>
     </div>

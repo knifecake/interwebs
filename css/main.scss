@@ -1,5 +1,6 @@
 ---
 ---
+
 $base-font-size: 18px;
 $small-font-size: 0.75rem;
 
@@ -22,6 +23,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@import "type";
 
 body {
   text-align: center;
@@ -106,6 +109,8 @@ img {
 
 figure {
   padding-bottom: 1rem;
+  max-width: 100%;
+  overflow: scroll;
 }
 
 figure img {
@@ -202,7 +207,7 @@ ul#blog-nav {
   }
 }
 
-nav.top-nav {
+nav.np-posts {
     margin-top: 2rem;
     text-align: left;
     font-family: $font-family-serif;
@@ -253,3 +258,5 @@ input {
   height: 1.7rem;
   font-size: 1rem;
 }
+
+@import "syntax";
