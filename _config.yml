@@ -3,9 +3,10 @@ title: Elias Hernandis
 email: eliashernandis@gmail.com
 author: Elias Hernandis
 description: > # this means to ignore newlines until "baseurl:"
-  Happy.
+  My personal website where I sometimes write nonsense, especially about technology.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://hernandis.me" # the base hostname & protocol for your site
+copyright: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 # Build settings
 markdown: kramdown
