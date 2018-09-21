@@ -1,13 +1,10 @@
 html {
-  font-size: 18px;
+  font-size: 16px;
   box-sizing: border-box;
   height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
-
-abbr {
-  border-bottom: 1px dotted #6f6f6f; }
 
 body {
   text-align: center;
@@ -63,8 +60,23 @@ p.lead {
   text-align: left; }
 
 p.article-meta {
-  font-size: 16.2px; }
+  font-size: 14.4px; }
 
+abbr {
+  border-bottom: 1px dotted #6f6f6f; }
+
+p.warning {
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #ffeb99;
+  border: 1px solid #ffce00;
+  box-shadow: 0 0 2px #ffce00; }
+
+@media (max-width: 34rem) {
+  p.warning {
+    margin-left: 0;
+    margin-right: 0; } }
 img {
   width: 100%;
   padding: .3rem;
@@ -83,100 +95,6 @@ figcaption {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   color: #6f6f6f; }
-
-.container {
-  max-width: 54rem;
-  margin: 0 auto; }
-
-article {
-  text-align: left;
-  font-family: Georgia, serif;
-  line-height: 1.6;
-  padding-left: 4rem;
-  width: 42rem; }
-
-footer {
-  font-size: 0.75rem;
-  background-color: #222222;
-  color: #a2a2a2;
-  min-height: 234px;
-  overflow: hidden;
-  padding: 2rem 0;
-  text-align: left;
-  margin-top: 2rem; }
-  footer a {
-    color: inherit;
-    font-weight: bold; }
-
-.footer-links li {
-  list-style-type: none;
-  height: 2rem;
-  margin: .5rem 0; }
-  .footer-links li a {
-    display: inline-block;
-    padding: 7.5px 15px;
-    line-height: 1; }
-
-.link-logo {
-  max-width: 2rem;
-  float: left; }
-
-svg#elias-heading {
-  max-width: 24rem;
-  margin: 3rem auto; }
-  svg#elias-heading path {
-    fill: #222222; }
-    svg#elias-heading path:hover {
-      fill: #ffce00; }
-
-nav.main-nav {
-  padding: 15px;
-  margin-bottom: 40px; }
-  nav.main-nav a {
-    padding: 0px 7px; }
-
-ul#blog-nav {
-  margin: 0;
-  padding: 0; }
-  ul#blog-nav li {
-    list-style-type: none;
-    padding-top: .3rem; }
-
-nav.np-posts {
-  margin-top: 2rem;
-  text-align: left;
-  font-family: Georgia, serif; }
-  nav.np-posts a {
-    color: #a2a2a2; }
-
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
-
-@media (max-width: 54rem) and (min-width: 34rem) {
-  .container {
-    padding: 0 1rem;
-    width: 100%; }
-
-  article {
-    width: 100%;
-    padding-left: 2rem; } }
-@media (max-width: 34rem) {
-  .container {
-    padding: 0 1rem;
-    width: 100%; }
-
-  article {
-    width: 100%;
-    padding-left: 0; } }
-form {
-  margin: 2rem auto; }
-
-input {
-  height: 1.7rem;
-  font-size: 1rem; }
 
 figure.highlight {
   font-size: 0.8rem; }
@@ -440,3 +358,96 @@ figure.highlight {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+.container {
+  max-width: 54rem;
+  margin: 0 auto; }
+
+article {
+  text-align: left;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  padding-left: 4rem;
+  width: 42rem; }
+
+footer {
+  font-size: 0.75rem;
+  background-color: #222222;
+  color: #a2a2a2;
+  min-height: 234px;
+  overflow: hidden;
+  padding: 2rem 0;
+  text-align: left;
+  margin-top: 2rem; }
+  footer a {
+    color: inherit;
+    font-weight: bold; }
+
+.footer-links li {
+  list-style-type: none;
+  height: 2rem;
+  margin: .5rem 0; }
+  .footer-links li a {
+    display: inline-block;
+    padding: 7.5px 15px;
+    line-height: 1; }
+
+.link-logo {
+  max-width: 2rem;
+  float: left; }
+
+svg#elias-heading {
+  max-width: 24rem;
+  margin: 3rem auto; }
+  svg#elias-heading path {
+    fill: #222222; }
+    svg#elias-heading path:hover {
+      fill: #ffce00; }
+
+nav.main-nav {
+  padding: 15px;
+  margin-bottom: 40px; }
+  nav.main-nav a {
+    padding: 0px 7px; }
+
+ul#blog-nav {
+  margin: 0;
+  padding: 0; }
+  ul#blog-nav li {
+    list-style-type: none;
+    padding-top: .3rem; }
+
+nav.np-posts {
+  margin-top: 2rem;
+  text-align: left;
+  font-family: Georgia, serif; }
+  nav.np-posts a {
+    color: #a2a2a2; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+@media (max-width: 54rem) and (min-width: 34rem) {
+  .container {
+    padding: 0 1rem;
+    width: 100%; }
+
+  article {
+    width: 100%;
+    padding-left: 2rem; } }
+@media (max-width: 34rem) {
+  .container {
+    padding: 0 1rem;
+    width: 100%; }
+
+  article {
+    width: 100%;
+    padding-left: 0; } }
+form {
+  margin: 2rem auto; }
+
+input {
+  height: 1.7rem;
+  font-size: 1rem; }

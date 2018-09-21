@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+  padding: .3rem;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 0 .5rem #d0d0d0;
+}
+
+figure {
+  padding-bottom: 1rem;
+  max-width: 100%;
+  overflow: scroll;
+}
+
+figure img {
+  cursor: zoom-in;
+}
+
+figcaption {
+  font-family: $font-family-sans;
+  font-size: $small-font-size;
+  color: $light-gray;
+}

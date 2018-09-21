@@ -18,7 +18,7 @@ trabajo. Lo ideal es que desde el principio utilices un sistema operativo
 bueno, como puede ser Linux. Linux es en realidad un *kernel* sobre el que se basan varios sistemas operativos. Es decir, que Linux viene en varios [sabores](https://en.wikipedia.org/wiki/Linux_distribution "Wikipedia sobre las
 distribuciones de Linux (en inglés)") (hay [unos
 cuantos](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
-"Imágen con un árbol genealógico de las principales versiones de Linux")). Cada
+"Imagen con un árbol genealógico de las principales versiones de Linux")). Cada
 uno tiene sus puntos fuertes, pero casi todos son muy parecidos, por lo menos a
 nivel de terminal. Yo recomiendo utilizar alguno basado en Debian y los
 comandos que aparecen aquí están pensados para ello. Ubuntu es de la familia de
@@ -38,7 +38,7 @@ beneficios inesperados.
 ### Virtualización con Vagrant
 
 Una buena solución para evitar romper nuestro ordenador mientras estamos
-haciendo prácticas, o simplementa para poder desarrollar en un sistema
+haciendo prácticas, o simplemente para poder desarrollar en un sistema
 operativo inferior como Windows o MacOS, es utilizar
 [virtualización](https://es.wikipedia.org/wiki/Virtualización "Artículo de
 Wikipedia en castellano sobre virtualización").
@@ -57,7 +57,7 @@ operativo anfitrión. Además, no tendrás que preocuparte por la compartición 
 archivos entre el <abbr title="Sistema Operativo">SO</abbr> anfitrión y el SO
 huésped.
 
-Bien, pues vamos diréctamente a ello. Para instalar Vagrant primero debes
+Bien, pues vamos directamente a ello. Para instalar Vagrant primero debes
 instalar [VirtualBox](https://www.virtualbox.org/wiki/Downloads "Enlace a
 descarga de VirtualBox"). Ten cuidado de descargar la versión correspondiente
 al SO anfitrión, no al que luego querrás virtualizar (esto es, si tienes
@@ -86,7 +86,7 @@ detalles son poco importantes, lo interesante es que puedes obtener archivos ya
 creados desde [Vagrant Cloud](https://app.vagrantup.com/boxes/search). Esta
 página es un repositorio de archivos Vagrantfile: puedes consultar los que hay
 disponibles. Cuando elijas uno, no hace falta que lo descargues, sino que desde
-la terminal puedes instalarlo en tu equipo diréctamente. Supongamos que decides instalar la última versión de Ubuntu, es decir que elijes el archivo `ubuntu/bionic64`. Pues los comandos que necesitas ejecutar para instalarlos son los siguientes:
+la terminal puedes instalarlo en tu equipo directamente. Supongamos que decides instalar la última versión de Ubuntu, es decir que elijes el archivo `ubuntu/bionic64`. Pues los comandos que necesitas ejecutar para instalarlos son los siguientes:
 
 {% highlight bash %}
 $ cd path/to/project
@@ -179,8 +179,57 @@ generar el `.zip`.
 
 ## Abraza el poder de UNIX y la terminal
 
-* Wildcards
-* Pandoc, latex
+### Wildcards y rangos en Bash
+
+La terminal por defecto de Linux y de MacOS (y desde hace poco, puede que también la tengas en Windows) utiliza el lenguaje [Bash](https://es.wikipedia.org/wiki/Bash "Wikipedia sobre Bash"). Bash es un lenguaje de *scripting* muy pontente. Aunque podríamos escribir cualquier programa en Bash, solemos centrarnos en las cosas que hace mejor, entre ellas la manipulación de archivos. En esta sección nos centramos en dos herramientas que proporciona Bash: wildcards y rangos.
+
+Los wildcards sirven para referirse a muchos archivos a la vez. Por ejemplo `rm *.txt` borrará todos los archivos que terminen en `.txt` del directorio actual. Un par de puntualizaciones sobre el wildcard `*`:
+* Solo expande a nombres de archivos, no de directorios, por lo que si quieres referirte a varios directorios a la vez debes usar a su primo, el wildcard `*`.
+* La expansión se hace antes de llamar al comando, por lo que no es necesario que el comando esté adaptado para utilizar el wildcard. Es decir, funciona en todos los sitios. Lo que ocurre por debajo es que Bash busca todos los archivos en el directorio actual que concuerden con la expresión wildcard y la sustituye por una lista de los nombres de los archivos que ha encontrado separados por espacios.
+
+Aquí van algunos ejemplos del uso de wildcards:
+{% highlight bash %}
+# borra todos los archivos que acaban por .o
+$ rm -f *.o
+
+# borra todos los archivos que empiezan por hola_
+$ rm -f hola_*
+
+# borra todos los archivos que acaban en .txt y que no están en el directorio
+# raíz, sino que se encuentran en una subcarpeta del mismo
+$ rm -f **/*.txt
+
+# borra todos los directorios y archivos que están dentro del actual
+$ rm -rf **
+{% endhighlight %}
+
+### Pandoc, Markdown, Latex
+
+[Pandoc](http://pandoc.org "Sitio web de pandoc") es un sistema de conversión de documentos, es decir, permite pasar de un montón de formatos a otro montón de formatos. Un ejemplo es pasar de MS Word a HTML para publicar una página web a partir del contenido de un archivo de Word.
+
+[LaTeX](https://www.latex-project.org) es un sistema de tipografía que genera documentos PDF de altísima calidad a partir de archivos fuente de texto plano (compila archivos `.tex` para pasarlos a `.pdf`). Es el software que se emplea en entornos académicos para elaborar libros y artículos con muchas ecuaciones. No permite un gran control sobre cómo queda el documento final, lo cual es bueno pues ahorra tiempo al no tener que tomar decisiones estéticas y previene inconsistencias.
+
+Por último, [Markdown](https://daringfireball.net/projects/markdown/ "sitio web de markdown"), es un lenguage de formato (como HTML) pensado para que sea legible. Los posts de este blog están escritos en Markdown. Por defecto Markdown soporta los estilos habituales en Word, pero mediante extensiones podemos hacer que tenga casi toda la funcionalidad de LaTeX pero con la ventaja de que su sintaxis es más sencilla y transparente.
+
+*La clave* está en utilizar archivos Markdown para escribir memorias, informes y demás, y luego compilarlos con pandoc para obtener un PDF. Esta tarea de compilación se puede añadir a un Makefile. Además, es sencillísimo utilizar plantillas, lo que hará que las memorias queden impresionantes. Y sin más dilación, al ajo:
+
+{% highlight bash %}
+# instalamos lo necesario
+sudo apt-get install -y doxygen valgrind texlive texlive-fonts-extra texlive-latex-extra texlive-lang-spanish pandoc
+sudo wget -O /usr/share/pandoc/data/templates/eisvogel.latex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+
+# una vez tenemos un archivo .md, lo compilamos con pandoc
+pandoc -o memoria.pdf memoria.md
+
+# si queremos podemos utilizar la plantilla eisvogel
+pandoc --template=eisvogel -o memoria.pdf memoria.md
+
+# obtenemos un archivo PDF a partir de la entrada memoria.md
+open memoria.pdf # solo vale en MacOS
+{% endhighlight %}
+
+### Más...
+
 * Documentación con doxygen
 * Miniutilidades: wc, ls -lah,...
 * man es tu amigo

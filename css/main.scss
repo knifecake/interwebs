@@ -1,7 +1,7 @@
 ---
 ---
 
-$base-font-size: 18px;
+$base-font-size: 16px;
 $small-font-size: 0.75rem;
 
 $font-family-serif: Georgia, serif;
@@ -12,6 +12,7 @@ $dark-gray: #222222;
 $light-gray: lighten($dark-gray, 30%);
 $lighter-gray: lighten($dark-gray, 50%);
 $yellow: #ffce00;
+$mobile-breakpoint: 34rem;
 
 // preserve some sanity
 html {
@@ -26,102 +27,9 @@ html {
 
 @import "type";
 
-body {
-  text-align: center;
-  font-family: $font-family-sans;
-  line-height: 1.4;
-  color: $dark-gray;
-  margin: 0;
-}
+@import "figures";
 
-// Type
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-
-  font-family: $font-family-sans;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.5rem;
-  color: $link-color;
-}
-
-h3 {
-  margin-top: 1rem;
-  margin-bottom: .2rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-a {
-  color: $link-color;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-small {
-  font-size: $small-font-size;
-}
-
-code {
-  background-color: #e0e0e0;
-  padding: .2rem;
-}
-
-.text-muted {
-  color: $lighter-gray;
-}
-
-p.lead {
-  margin: 2rem 0;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  font-family: $font-family-serif;
-  text-align: left;
-}
-
-p.article-meta {
-  font-size: ($base-font-size * .9);
-}
-
-// figures and images
-
-img {
-  width: 100%;
-  padding: .3rem;
-  border: 1px solid #d0d0d0;
-  box-shadow: 0 0 .5rem #d0d0d0;
-}
-
-figure {
-  padding-bottom: 1rem;
-  max-width: 100%;
-  overflow: scroll;
-}
-
-figure img {
-  cursor: zoom-in;
-}
-
-figcaption {
-  font-family: $font-family-sans;
-  font-size: $small-font-size;
-  color: $light-gray;
-}
+@import "syntax";
 
 // Layout
 .container {
@@ -259,4 +167,3 @@ input {
   font-size: 1rem;
 }
 
-@import "syntax";
