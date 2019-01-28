@@ -20,3 +20,18 @@ figcaption {
   font-size: $small-font-size;
   color: $light-gray;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 0.2rem;
+}
+
+th {
+  background-color: $yellow;
+}

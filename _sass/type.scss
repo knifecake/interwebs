@@ -49,7 +49,7 @@ small {
 }
 
 code {
-  background-color: #e0e0e0;
+  background-color: $lightest-gray;
   padding: .2rem;
 }
 
@@ -88,4 +88,14 @@ p.warning {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 5px solid $lightest-gray;
+}
+
+div.footnotes {
+  border-top: 1px solid $lightest-gray;
 }

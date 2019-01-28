@@ -46,7 +46,7 @@ small {
   font-size: 0.75rem; }
 
 code {
-  background-color: #e0e0e0;
+  background-color: #d5d5d5;
   padding: .2rem; }
 
 .text-muted {
@@ -77,6 +77,14 @@ p.warning {
   p.warning {
     margin-left: 0;
     margin-right: 0; } }
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 5px solid #d5d5d5; }
+
+div.footnotes {
+  border-top: 1px solid #d5d5d5; }
+
 img {
   width: 100%;
   padding: .3rem;
@@ -95,6 +103,18 @@ figcaption {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 0.75rem;
   color: #6f6f6f; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem; }
+
+td, th {
+  border: 1px solid black;
+  padding: 0.2rem; }
+
+th {
+  background-color: #ffce00; }
 
 figure.highlight {
   font-size: 0.8rem; }
