@@ -1,5 +1,5 @@
 ---
-title: "Lazy evaliation in Haskell"
+title: "Lazy evaluation in Haskell"
 layout: post
 abstract: >
   This article is part of a series on Haskell about how easy it is to define
