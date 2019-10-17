@@ -101,9 +101,8 @@ introducing a performance penalty (well, at least in the number of steps.[^2])
 Let's look at how the previous examples would look like if we used call-by-need.
 
 {% highlight plain %}
-
   f(a)
-? f((2 + 3))
+= f((2 + 3))
 = (2 + 3) * 2
 = 5 * 2
 = 10
