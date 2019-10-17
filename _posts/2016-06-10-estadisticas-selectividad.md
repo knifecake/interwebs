@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Estadísticas PAU 2012-2016
+lang: es
 abstract: >
   Aunque este (2016) es el úlimo año en el que se celebra la prueba, puede que
   para futuras generaciones con exámenes similares esto sea de utilidad. Para

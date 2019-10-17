@@ -1,6 +1,7 @@
 ---
 title: "LabsEPS parte 1: el modelo"
 layout: post
+lang: es
 abstract: >
   Muy de vez en cuando me encuentro vagando por los pasillos de la tercera
   planta de la escuela en busca de un laboratorio libre. Muchas veces, el

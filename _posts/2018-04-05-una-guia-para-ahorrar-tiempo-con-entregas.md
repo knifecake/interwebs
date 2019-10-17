@@ -1,6 +1,7 @@
 ---
 title: "Cómo ser un hacker: una guía para ahorrar tiempo con las entregas"
 layout: post
+lang: es
 abstract: >
   Hacer entregas normalmente incluye una gran cantidad de trabajo repetitivo que se repite en varias asignaturas. Además, trabajar en grupo significa compartir código y luego juntarlo y hacer que funcione! Y si a esto le sumamos que desde la terminal podemos cargarnos nuestro sistema operativo, la verdad que no apetece nada ponerse a trabajar. Pero llega el día de la entrega y todo se acumula. Pues bien, es posible evitar estos tres problemas y ahorrar un montón de tiempo en el proceso.
 ---

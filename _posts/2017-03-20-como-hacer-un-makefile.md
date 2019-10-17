@@ -1,6 +1,7 @@
 ---
 title: Como hacer un Makefile
 layout: post
+lang: es
 abstract: >
   GNU make es una utilidad disponible en Linux que agiliza la tarea de compilar código desde la terminal. Nos evita tener que escribir los comandos de compilación a mano, que suelen ser muy largos, y en cambio nos permite escribir algo mucho más corto que al final hace lo mismo. Además, make puede hacer muchas otras cosas que harán que preparar las prácticas para enviarlas sea coser y cantar.
 ---

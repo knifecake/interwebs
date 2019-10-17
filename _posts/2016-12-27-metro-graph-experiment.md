@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Probando el algoritmo de Dijkstra en el Metro de Madrid
+lang: es
 abstract: >
   La idea original era ver si era posible cargar un archivo que
   describe la red de metro de Madrid como una lista de estaciones por líneas pero

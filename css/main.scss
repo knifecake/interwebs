@@ -7,9 +7,9 @@ $small-font-size: 0.75rem;
 $font-family-serif: Georgia, serif;
 $font-family-sans: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-$link-color: #5291ff;
+$link-color: #005B9C;
 $dark-gray: #222222;
-$light-gray: lighten($dark-gray, 30%);
+$light-gray: lighten($dark-gray, 21%);
 $lighter-gray: lighten($dark-gray, 50%);
 $lightest-gray: lighten($dark-gray, 70%);
 $yellow: #ffce00;
@@ -122,7 +122,7 @@ nav.np-posts {
     font-family: $font-family-serif;
 
     a {
-        color: $lighter-gray;
+        color: $light-gray;
     }
 }
 

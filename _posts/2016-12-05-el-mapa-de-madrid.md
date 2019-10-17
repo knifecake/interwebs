@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Alberto Benaiges &amp; Elias Hernandis
+lang: es
 title: El mapa de Madrid
 ---
 

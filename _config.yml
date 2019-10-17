@@ -7,6 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://hernandis.me" # the base hostname & protocol for your site
 copyright: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+lang: en
 
 # Build settings
 markdown: kramdown
