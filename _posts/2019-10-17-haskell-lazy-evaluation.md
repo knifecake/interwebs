@@ -142,11 +142,11 @@ languages, such as Haskell, incorporate this evaluation strategy as they are
 mostly pure. Impure parts such as IO, networking or randomness use a different
 evaluation strategy so that no unexpected consequences arise.
 
-If you want to read more about evaluation strategies, you can check out [this wikipedia article](https://en.wikipedia.org/wiki/Evaluation_strategy "Wikipedia article on evaluation strategies)
+If you want to read more about evaluation strategies, you can check out [this wikipedia article](https://en.wikipedia.org/wiki/Evaluation_strategy "Wikipedia article on evaluation strategies")
 
 
 [^1]: Although in some languages we may substitute *call-by-name* with *call-by-reference*, the idea of strict evaluation still applies — **all parameters are evaluated before the function call** — only in call-by-reference the address of the value is passed instead of a copy of the value itself, allowing the function to modify it.
 
 [^2]: It may, however, introduce a memory usage penalty, but these cases are more rare and easier to detect and fix just by rewriting the order of arguments.
 
-[^3]: https://en.wikipedia.org/wiki/Church–Rosser_theorem
+[^3]: [Wikipedia: The Church-Rosser theorem](https://en.wikipedia.org/wiki/Church–Rosser_theorem "Wikipedia article on the Church-Rosser theorem")
