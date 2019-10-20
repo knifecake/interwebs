@@ -5,9 +5,9 @@ abstract: >
   This article is part of a series on Haskell about how easy it is to define
   infinite structures in really concise ways. Building on the previous article
   about lazy evaluation, we explore how to define infinite structures using
-  recursion without using a base case. While in other languages, this would
-  result in an infinite loop, this does not happen due to its powerful lazy
-  evaluation strategy.
+  recursion without using a base case. While in other languages this would
+  result in an infinite loop, this does not happen in Haskell due to its
+  powerful lazy evaluation strategy.
 ---
 
 ## First steps: an infinite list of ones
@@ -47,8 +47,8 @@ ones = 1 : ones
 What do you think would happen if we called `ones`? Well, `ones` is defined
 recursively, but it does not have a base case, so normally we would say that
 execution does not terminate, or that a maximum depth of recursion is reached
-and the program stops or something along those lines. In Haskell, this is still
-true, calling `ones` directly will result in the program never stopping.
+and the program stops, or something along those lines. In Haskell, this is
+still true, calling `ones` directly will result in the program never stopping.
 
 But, what if we called `take 3 ones`. Remember that the function `take n xs`
 returns the first `n` elements of the list `xs`. And indeed,
@@ -159,5 +159,10 @@ And indeed,
 ghci> take 4 primes
 [2,3,5,7]
 {% endhighlight %}
+
+Lazy evaluation is a powerful evaluation strategy that allows us to concisely
+and expressively write definitions of infinite structures. In future posts, we
+will explore other consequences of this design decision of the Haskell language
+and some situations in which it does not prove so useful.
 
 [^1]: You might have seen the syntax `[a..b]` before. It is a shorthand for the function `enumFromTo` defined in [the enum class](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1310006.3.4). In fact, `[a..]` is also a shorthand for the method `enumFrom`. Integers in Haskell are an instance of the `Enum` class that defines these methods.
