@@ -1,3 +1,5 @@
+let focusedElement;
+
 const saveScores = () => {
   const items = document.querySelectorAll('#scoreboard li');
   let scores = [];
@@ -23,6 +25,27 @@ const restoreScores = () => {
   document
     .querySelectorAll('#scoreboard li')
     .forEach(bindPlayerEvents);
+}
+
+const processInput = (e) => {
+  const input = e.target.value;
+  if (input.length > 0) { 
+    if (input[0] == '+' || input[0] == '-') {
+      const player = e.target.parentNode.querySelector('input[type="text"]').value;
+      const scores = JSON.parse(localStorage.getItem('scores') || "[]");
+      const prev = scores.find(s => s.key == player);
+      if (prev !== undefined && input != prev.val) {
+        const curr = +prev.val + +input;
+        if (!isNaN(curr)) {
+          e.target.value = curr;
+        }
+      }
+    }
+  } else {
+    e.target.value = 0;
+  }
+
+  saveScores();
 }
 
 const addPlayer = (name, score) => {
@@ -53,10 +76,30 @@ const bindPlayerEvents = li => {
   li.querySelector('button')
     .addEventListener('click', removePlayer);
 
-  li.querySelectorAll('input')
+  li.querySelectorAll('input[type="text"]')
     .forEach(i => i.addEventListener('blur', saveScores));
-}
 
+  li.querySelectorAll('input[type="tel"]')
+    .forEach(i => i.addEventListener('blur', processInput));
+
+  li.querySelectorAll('input')
+    .forEach(i => {
+      // blur when pressing enter
+      i.addEventListener('keypress', e => {
+        if (e.key == "Enter") {
+          i.blur();
+        }
+      });
+
+      // select text when input is focused
+      i.addEventListener('focus', e => {
+        if (focusedElement == i) return;
+
+        focusedElement = i;
+        setTimeout(() => i.select(), 0);
+      });
+    });
+}
 
 document
   .getElementById('add-player')

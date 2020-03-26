@@ -1,3 +1,7 @@
+:root {
+  --gray: #444;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +12,8 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Helvetica Neue, Helvetica, Verdana, Arial, sans-serif;
+  /* font-family: Helvetica Neue, Helvetica, Verdana, Arial, sans-serif; */
+  font-family: Hack, Monaco, monospace;
   font-size: 20px;
   background: #000;
   color: #fff;
@@ -36,9 +41,14 @@ li button {
   min-height: 30px;
   border-radius: 50%;
 
-  background-color: #333;
+  background-color: var(--gray);
   font-weight: bold;
   font-size: 1em;
+}
+
+button:hover, button:focus {
+  color: white;
+  outline: none;
 }
 
 input {
@@ -46,6 +56,14 @@ input {
   background: transparent;
   color: #fff;
   font-size: inherit;
+  font-family: inherit;
+  min-width: 0;
+  text-transform: uppercase;
+}
+
+input:focus {
+  background-color: var(--gray);
+  outline: none;
 }
 
 li input[type="text"] {
@@ -62,9 +80,14 @@ li input[type="tel"] {
   width: 100%;
   font-size: 1rem;
   border: none;
-  color: #444;
+  color: var(--gray);
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  font-family: inherit;
 }
 
+#add-player:focus, #add-player:hover {
+  color: white;
+  outline: none;
+}
