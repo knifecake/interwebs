@@ -3,29 +3,48 @@
 <head>
   <meta charset="utf-8">
   <title>Scorekeeper</title>
+  
+  <meta name="description" content="An app for keeping track of scores of different players">
+  <meta name="author" content="Elias Hernandis">
+  <meta name="theme-color" content="#000000">
+  <link rel="shortcut icon" href="img/favicon-32.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="scorekeeper.css">
   <script src="scorekeeper.js" defer></script>
 
-  <link rel="mask-icon" href="img/mask-icon.svg" color="red">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="img/touch-icon-192.png">
+
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
-  <ul id="scoreboard">
-    <li>
-      <button>&times;</button>
-      <input type="text" value="Player 1">
-      <input type="tel" value="0">
-    </li>
-    <li>
-      <button>&times;</button>
-      <input type="text" value="Player 2">
-      <input type="tel" value="0">
-    </li>
-  </ul>
-  <button id="add-player">add player</li>
+  <main>
+    <ul id="scoreboard">
+      <li>
+        <button>&times;</button>
+        <input type="text" value="Player 1">
+        <input type="tel" value="0">
+      </li>
+      <li>
+        <button>&times;</button>
+        <input type="text" value="Player 2">
+        <input type="tel" value="0">
+      </li>
+    </ul>
+    <button id="add-player">add player</li>
+  </main>
+  <footer>
+    <section>
+      <h2>About</h2>
+      <p>Add players by tapping the <kbd>add player</kbd> button. Scores can be inputed directly or as differences to the current score. For instance, if a player has a score of 100 and we type <kbd>+20</kbd> on the score field for that player, the score will be updated to <kbd>120<kbd>. Similarly, if we enter <kbd>-50</kbd> the score will now be <kbd>70</kbd>. To enter negative scores one can enter <kbd>0<kbd> and then the negative score, since a minus sign in front of a number is always interpreted as a score delta.</p>
+
+      <p>Scores are saved even if you don't add the app to your home screen.</p>
+    </section>
+    <p>Made with a &#x1F5A5; by <a href="https://hernandis.me/">Elias Hernandis</a>.</p>
+  </footer>
 </body>
 </html>

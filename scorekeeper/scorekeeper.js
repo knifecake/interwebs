@@ -48,7 +48,7 @@ const processInput = (e) => {
   saveScores();
 }
 
-const addPlayer = (name, score) => {
+const addPlayer = (name, score, focus = false) => {
   const list = document.getElementById('scoreboard');
   const li = document.createElement('li');
   const cross = document.createElement('button');
@@ -65,6 +65,9 @@ const addPlayer = (name, score) => {
   list.appendChild(li);
 
   bindPlayerEvents(li);
+
+  if (focus)
+    name_field.focus();
 }
 
 const removePlayer = e => {
@@ -103,6 +106,6 @@ const bindPlayerEvents = li => {
 
 document
   .getElementById('add-player')
-  .addEventListener('click', _ => addPlayer('New player', 0));
+  .addEventListener('click', _ => addPlayer('New player', 0, true));
 
 restoreScores();
