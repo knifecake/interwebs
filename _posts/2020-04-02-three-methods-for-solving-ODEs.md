@@ -26,8 +26,7 @@ system of ordinary differential equations of the form
 
 \begin{equation}
 \begin{cases}
-  \dot x (t) = A x(t),\qquad t \in [0, T] \\\\\
-  x(0) = x_0
+\dot x (t) = A x(t),\qquad t \in [0, T] \\\\x(0) = x_0
 \end{cases},
 \end{equation}
 
@@ -89,15 +88,13 @@ Another way of solving systems of ODEs is to apply the so-called **Euler
 forward** method. The main idea behind this method is to approximate the
 derivative by a finite difference
 
-$$
-\dot u (t) \approx \frac{u^{n + 1} - u^n}{\Delta t}.
-$$
+$$\dot u (t) \approx \frac{u^{n + 1} - u^n}{\Delta t}.$$
 
 In the context of (linear) systems of ODEs we have that
 
-$$
+\[
 \dot{\mathbf u} \approx \frac{\mathbf u^{n + 1} - \mathbf u^n}{\Delta t} = A \mathbf u,
-$$
+\]
 
 where $$\mathbf u = (u_0, \dots, u_i, \dots, u_N)^T$$ is a column vector made from
 the approximations $$u_i(t)$$ obtained in the first part of the method of lines.
